@@ -7,7 +7,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 
-
 @Composable
 fun OnBackgroundTitleText(text: String) {
     TitleText(text = text, color = MaterialTheme.colorScheme.onBackground)
@@ -15,13 +14,8 @@ fun OnBackgroundTitleText(text: String) {
 
 @Composable
 fun TitleText(text: String, color: Color) {
-    Text(
-        text = text,
-        style = MaterialTheme.typography.titleLarge,
-        color = color
-    )
+    Text(text = text, style = MaterialTheme.typography.titleLarge, color = color)
 }
-
 
 @Composable
 fun OnBackgroundItemText(text: String) {
@@ -30,21 +24,16 @@ fun OnBackgroundItemText(text: String) {
 
 @Composable
 fun ItemText(text: String, color: Color) {
-    Text(
-        text = text,
-        style = MaterialTheme.typography.bodySmall,
-        color = color
-    )
+    Text(text = text, style = MaterialTheme.typography.bodySmall, color = color)
 }
-
 
 @Composable
 fun PrimaryTextButton(text: String, onClick: () -> Unit) {
-    CustomTextButton(text = text, textColor = Color.White, onClick = onClick)
+    TextButton(text = text, textColor = Color.White, onClick = onClick)
 }
 
 @Composable
-fun CustomTextButton(text: String, textColor: Color, onClick: () -> Unit) {
+fun TextButton(text: String, textColor: Color, onClick: () -> Unit) {
     Button(
         onClick = onClick,
         modifier = Modifier.padding(8.dp),
@@ -53,9 +42,6 @@ fun CustomTextButton(text: String, textColor: Color, onClick: () -> Unit) {
             contentColor = textColor
         )
     ) {
-        Text(
-            text = text,
-            style = MaterialTheme.typography.labelMedium
-        )
+        Text(text = text, style = MaterialTheme.typography.labelMedium)
     }
 }
